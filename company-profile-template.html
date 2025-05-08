@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - ELEC014 Industry and Educational Tour</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to company profile page */
+        .company-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .company-header .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .company-header-content {
+            flex: 2;
+        }
+        
+        .company-logo {
+            flex: 1;
+            max-width: 300px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .company-details {
+            padding: 60px 0;
+        }
+        
+        .company-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .company-section {
+            margin-bottom: 40px;
+        }
+        
+        .company-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .photo-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            aspect-ratio: 4/3;
+        }
+        
+        .speaker-highlight {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .speaker-highlight h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .back-link i {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .company-header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .company-details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ELEC014 E-Journal</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#itinerary">Itinerary</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="index.html#speakers">Speakers</a></li>
+                    <li><a href="index.html#reflections">Reflections</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#organizers">Organizers</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Company Header -->
+    <header class="company-header">
+        <div class="container">
+            <div class="company-header-content">
+                <a href="index.html#companies" class="back-link"><i class="fas fa-arrow-left"></i> Back to All Companies</a>
+                <h1>Company Name</h1>
+                <p class="company-location"><i class="fas fa-map-marker-alt"></i> Location, City</p>
+                <p class="company-visit-date"><i class="fas fa-calendar-alt"></i> Visit Date: Month Day, Year</p>
+            </div>
+            <div class="company-logo">
+                <div class="placeholder-image">
+                    <i class="fas fa-building"></i>
+                    <p>Company Logo</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Company Details -->
+    <section class="company-details">
+        <div class="container">
+            <div class="company-details-grid">
+                <div class="company-info-column">
+                    <div class="company-section">
+                        <h3>About the Company</h3>
+                        <p>Comprehensive description of the company, including its history, mission, vision, and core business areas. This section should provide context about why this company was selected for the educational tour and its relevance to the computer studies curriculum.</p>
+                        <p>Additional information about the company's market position, notable achievements, and industry recognition can be included here to provide a complete picture of the organization.</p>
+                    </div>
+                    
+                    <div class="company-section">
+                        <h3>Technologies Observed</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Technology 1</span>
+                            <span class="tech-tag">Technology 2</span>
+                            <span class="tech-tag">Technology 3</span>
+                            <span class="tech-tag">Technology 4</span>
+                            <span class="tech-tag">Technology 5</span>
+                        </div>
+                        <p>Detailed description of the technologies, tools, frameworks, and methodologies observed during the company visit. This section should highlight how these technologies are implemented in real-world business scenarios.</p>
+                        <p>Include information about any proprietary technologies or unique implementations that were showcased during the visit.</p>
+                    </div>
+                </div>
+                
+                <div class="company-visit-column">
+                    <div class="company-section">
+                        <h3>Visit Highlights</h3>
+                        <p>Summary of the key activities and experiences during the visit, including facility tours, demonstrations, workshops, or interactive sessions that were conducted.</p>
+                        
+                        <div class="speaker-highlight">
+                            <h4>Speaker Name - Position</h4>
+                            <p>Brief overview of the presentation or discussion led by this company representative, highlighting the main topics covered.</p>
+                            <div class="quote">
+                                "Notable quote or key insight shared by the speaker that was particularly impactful or relevant to the educational objectives of the tour."
+                            </div>
+                        </div>
+                        
+                        <div class="speaker-highlight">
+                            <h4>Speaker Name - Position</h4>
+                            <p>Brief overview of another presentation or discussion, focusing on different aspects of the company's operations or technologies.</p>
+                            <div class="quote">
+                                "Another impactful quote or insight that demonstrates the value of the learning experience."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="company-section">
+                        <h3>Key Innovations</h3>
+                        <p>Detailed description of innovative products, services, or processes observed at the company. This section should highlight how these innovations are addressing market needs or industry challenges.</p>
+                        <p>Include information about any research and development initiatives, future projects, or emerging technologies that the company is working on.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company-section">
+                <h3>Photo Gallery</h3>
+                <p>Visual documentation of the company visit, showcasing the facilities, technologies, and student interactions.</p>
+                <div class="photo-gallery">
+                    <!-- Photo items - to be replaced with actual photos -->
+                    <div class="photo-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Facility Tour</p>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Technology Demonstration</p>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Student Interaction</p>
+                        </div>
+                    </div>
+                    <!-- More photo items can be added as needed -->
+                </div>
+            </div>
+            
+            <div class="company-section">
+                <h3>Learning Outcomes</h3>
+                <p>Summary of the key takeaways and educational value derived from the company visit. This section should connect the experience to specific learning objectives of the ELEC014 course.</p>
+                <p>Include information about how the knowledge and insights gained from this visit can be applied in academic projects or future career paths.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ELEC014 E-Journal</h3>
+                    <p>College of Computer Studies</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#itinerary">Itinerary</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#speakers">Speakers</a></li>
+                        <li><a href="index.html#reflections">Reflections</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#organizers">Organizers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>College of Computer Studies</p>
+                    <p>University of the Immaculate Conception</p>
+                    <p>Davao City, Philippines</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ELEC014 Industry and Educational Tour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

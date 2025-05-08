@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Reflection - ELEC014 Industry and Educational Tour</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to student reflection page */
+        .reflection-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .reflection-header .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .reflection-header-content {
+            flex: 2;
+        }
+        
+        .student-photo {
+            flex: 1;
+            max-width: 250px;
+        }
+        
+        .student-photo .placeholder-image {
+            border-radius: 50%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .reflection-content {
+            padding: 60px 0;
+        }
+        
+        .reflection-section {
+            margin-bottom: 40px;
+        }
+        
+        .reflection-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .reflection-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-left: 3px solid var(--accent-color);
+            padding: 20px;
+            margin: 30px 0;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .company-references {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .company-reference {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .company-reference h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .learning-points {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .learning-points li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .learning-points li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .back-link i {
+            margin-right: 5px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .image-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            aspect-ratio: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .reflection-header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .student-photo {
+                order: 1;
+                margin-bottom: 20px;
+            }
+            
+            .reflection-header-content {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ELEC014 E-Journal</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#itinerary">Itinerary</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="index.html#speakers">Speakers</a></li>
+                    <li><a href="index.html#reflections">Reflections</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#organizers">Organizers</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reflection Header -->
+    <header class="reflection-header">
+        <div class="container">
+            <div class="reflection-header-content">
+                <a href="index.html#reflections" class="back-link"><i class="fas fa-arrow-left"></i> Back to All Reflections</a>
+                <h1>Student Name</h1>
+                <p class="student-program">Bachelor of Science in Computer Science</p>
+                <p class="student-year">4th Year</p>
+            </div>
+            <div class="student-photo">
+                <div class="placeholder-image">
+                    <i class="fas fa-user-graduate"></i>
+                    <p>Student Photo</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Reflection Content -->
+    <section class="reflection-content">
+        <div class="container">
+            <div class="reflection-section">
+                <h3>Reflection on AI and Software Development Practices</h3>
+                <p>Introduction to the reflection, setting the context of the educational tour and the specific focus areas that resonated with the student. This section should provide an overview of the student's expectations before the tour and how those expectations were met or transformed.</p>
+                
+                <div class="reflection-quote">
+                    "A personal insight or key takeaway that encapsulates the most significant learning from the educational tour experience."
+                </div>
+                
+                <p>Detailed reflection on the AI technologies and software development methodologies observed during the company visits. This section should connect theoretical knowledge from the classroom with practical applications witnessed in the industry.</p>
+                
+                <p>Analysis of how these technologies and methodologies are shaping the future of the industry and the implications for computer science professionals. This analysis should demonstrate critical thinking and a deep understanding of the subject matter.</p>
+            </div>
+            
+            <div class="reflection-section">
+                <h3>Company-Specific Insights</h3>
+                <p>Overview of the most impactful company visits and the specific insights gained from each. This section should highlight the unique aspects of each company and their contribution to the student's learning experience.</p>
+                
+                <div class="company-references">
+                    <div class="company-reference">
+                        <h4>Company Name 1</h4>
+                        <p>Specific insights gained from this company visit, focusing on technologies, methodologies, or business practices that were particularly educational.</p>
+                    </div>
+                    
+                    <div class="company-reference">
+                        <h4>Company Name 2</h4>
+                        <p>Specific insights gained from this company visit, highlighting different aspects of the industry that complemented the learning from other visits.</p>
+                    </div>
+                    
+                    <div class="company-reference">
+                        <h4>Company Name 3</h4>
+                        <p>Specific insights gained from this company visit, emphasizing unique perspectives or innovative approaches observed.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reflection-section">
+                <h3>Key Learning Points</h3>
+                <p>Summary of the most valuable knowledge and skills acquired during the educational tour. This section should articulate clear learning outcomes that demonstrate the educational value of the experience.</p>
+                
+                <ul class="learning-points">
+                    <li>Specific learning point related to technical knowledge or skills, such as understanding of a particular technology or development methodology.</li>
+                    <li>Specific learning point related to industry practices or business operations, such as project management approaches or client engagement strategies.</li>
+                    <li>Specific learning point related to professional development or career insights, such as job roles, skill requirements, or industry trends.</li>
+                    <li>Specific learning point related to soft skills or personal growth, such as teamwork, communication, or adaptability in professional settings.</li>
+                    <li>Specific learning point related to academic connections, such as how the experience has enhanced understanding of coursework or research interests.</li>
+                </ul>
+            </div>
+            
+            <div class="reflection-section">
+                <h3>Personal Growth and Career Implications</h3>
+                <p>Reflection on how the educational tour has influenced personal and professional development. This section should discuss how the experience has shaped career aspirations, academic focus, or personal interests.</p>
+                
+                <p>Analysis of the skills and knowledge that need to be developed further to succeed in the industry, based on observations and interactions during the tour. This analysis should demonstrate self-awareness and a commitment to continuous learning.</p>
+                
+                <div class="reflection-quote">
+                    "A forward-looking statement about how this experience will influence future academic and career decisions."
+                </div>
+            </div>
+            
+            <div class="reflection-section">
+                <h3>Visual Memories</h3>
+                <p>A collection of personal photos that capture meaningful moments from the educational tour, accompanied by brief descriptions of their significance.</p>
+                
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Memorable Moment 1</p>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Memorable Moment 2</p>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Memorable Moment 3</p>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Memorable Moment 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reflection-section">
+                <h3>Conclusion</h3>
+                <p>Summary of the overall educational tour experience and its impact on academic and professional development. This conclusion should synthesize the key insights and learnings discussed throughout the reflection.</p>
+                
+                <p>Expression of gratitude to the organizers, host companies, and fellow participants for their contributions to the learning experience. This acknowledgment should recognize the collaborative nature of the educational tour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ELEC014 E-Journal</h3>
+                    <p>College of Computer Studies</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#itinerary">Itinerary</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#speakers">Speakers</a></li>
+                        <li><a href="index.html#reflections">Reflections</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#organizers">Organizers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>College of Computer Studies</p>
+                    <p>University of the Immaculate Conception</p>
+                    <p>Davao City, Philippines</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ELEC014 Industry and Educational Tour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Profile - ELEC014 Industry and Educational Tour</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to speaker profile page */
+        .speaker-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .speaker-header .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .speaker-header-content {
+            flex: 2;
+        }
+        
+        .speaker-photo {
+            flex: 1;
+            max-width: 250px;
+        }
+        
+        .speaker-photo .placeholder-image {
+            border-radius: 50%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .speaker-content {
+            padding: 60px 0;
+        }
+        
+        .speaker-section {
+            margin-bottom: 40px;
+        }
+        
+        .speaker-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .key-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-left: 3px solid var(--accent-color);
+            padding: 20px;
+            margin: 30px 0;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .presentation-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .topic-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            min-width: 250px;
+            transition: var(--transition);
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .topic-card h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .topic-card h4 i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .key-insights {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .key-insights li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .key-insights li:before {
+            content: '\f0eb';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .back-link i {
+            margin-right: 5px;
+        }
+        
+        .presentation-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .presentation-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            aspect-ratio: 4/3;
+        }
+        
+        .resources-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resources-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+        }
+        
+        .resources-list li i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .resource-link {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .speaker-header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .speaker-photo {
+                order: 1;
+                margin-bottom: 20px;
+            }
+            
+            .speaker-header-content {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ELEC014 E-Journal</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#itinerary">Itinerary</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="index.html#speakers">Speakers</a></li>
+                    <li><a href="index.html#reflections">Reflections</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#organizers">Organizers</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Speaker Header -->
+    <header class="speaker-header">
+        <div class="container">
+            <div class="speaker-header-content">
+                <a href="index.html#speakers" class="back-link"><i class="fas fa-arrow-left"></i> Back to All Speakers</a>
+                <h1>Speaker Name</h1>
+                <p class="speaker-title">Position Title</p>
+                <p class="speaker-company">Company Name</p>
+                <p class="presentation-date"><i class="fas fa-calendar-alt"></i> Presentation Date: Month Day, Year</p>
+            </div>
+            <div class="speaker-photo">
+                <div class="placeholder-image">
+                    <i class="fas fa-user-tie"></i>
+                    <p>Speaker Photo</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Speaker Content -->
+    <section class="speaker-content">
+        <div class="container">
+            <div class="speaker-section">
+                <h3>About the Speaker</h3>
+                <p>Comprehensive biography of the speaker, including their professional background, expertise, and achievements. This section should highlight why this speaker was selected for the educational tour and their relevance to the computer studies curriculum.</p>
+                
+                <p>Additional information about the speaker's contributions to their field, publications, research, or industry recognition can be included here to provide a complete picture of their expertise and authority.</p>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Presentation Overview</h3>
+                <p>Summary of the presentation or discussion led by the speaker, including the main topic, objectives, and format. This section should provide context for the educational value of the presentation.</p>
+                
+                <div class="key-quote">
+                    "A notable quote from the speaker that encapsulates a key insight or message from their presentation."
+                </div>
+                
+                <p>Description of how the presentation connected to the educational objectives of the tour and its relevance to the students' academic and professional development.</p>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Key Topics Covered</h3>
+                <div class="presentation-topics">
+                    <div class="topic-card">
+                        <h4><i class="fas fa-lightbulb"></i> Topic 1</h4>
+                        <p>Detailed explanation of this topic, including the key concepts, examples, and applications discussed by the speaker.</p>
+                        <p>Analysis of how this topic relates to current industry trends or academic knowledge in the field of computer studies.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h4><i class="fas fa-code"></i> Topic 2</h4>
+                        <p>Detailed explanation of this topic, focusing on different aspects of the presentation that complemented the other topics.</p>
+                        <p>Discussion of practical applications or case studies presented to illustrate this topic.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h4><i class="fas fa-chart-line"></i> Topic 3</h4>
+                        <p>Detailed explanation of this topic, emphasizing unique perspectives or innovative approaches shared by the speaker.</p>
+                        <p>Connections between this topic and the broader themes of the educational tour or curriculum.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Key Insights and Takeaways</h3>
+                <p>Summary of the most valuable knowledge and insights gained from the speaker's presentation. This section should articulate clear learning outcomes that demonstrate the educational value of the experience.</p>
+                
+                <ul class="key-insights">
+                    <li>Specific insight related to industry practices or technological trends, such as emerging technologies, market developments, or future directions.</li>
+                    <li>Specific insight related to professional skills or career development, such as required competencies, job opportunities, or career paths in the field.</li>
+                    <li>Specific insight related to academic applications, such as research opportunities, project ideas, or theoretical frameworks relevant to computer studies.</li>
+                    <li>Specific insight related to problem-solving approaches or methodologies used in the industry that can be applied in academic or professional contexts.</li>
+                    <li>Specific insight related to ethical considerations or social impacts of technology that broadened students' understanding of their field.</li>
+                </ul>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Presentation Gallery</h3>
+                <p>Visual documentation of the presentation, including photos of the speaker, presentation slides, demonstrations, or student interactions.</p>
+                
+                <div class="presentation-gallery">
+                    <div class="presentation-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Presentation Moment 1</p>
+                        </div>
+                    </div>
+                    <div class="presentation-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Presentation Moment 2</p>
+                        </div>
+                    </div>
+                    <div class="presentation-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-image"></i>
+                            <p>Presentation Moment 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Q&A Highlights</h3>
+                <p>Summary of the most insightful questions asked by students and the speaker's responses. This section should highlight the interactive aspects of the presentation and the additional knowledge gained through dialogue.</p>
+                
+                <div class="qa-item">
+                    <h4>Question: "Sample student question about a specific aspect of the presentation?"</h4>
+                    <p><strong>Response:</strong> Summary of the speaker's answer, highlighting key points and insights that expanded on the presentation content.</p>
+                </div>
+                
+                <div class="qa-item">
+                    <h4>Question: "Another sample student question exploring a different topic?"</h4>
+                    <p><strong>Response:</strong> Summary of the speaker's answer, emphasizing practical applications or real-world examples that enhanced understanding.</p>
+                </div>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Additional Resources</h3>
+                <p>List of resources recommended by the speaker for further learning on the topics discussed. This section should provide students with pathways to deepen their knowledge beyond the presentation.</p>
+                
+                <ul class="resources-list">
+                    <li>
+                        <i class="fas fa-book"></i>
+                        <div>
+                            <p><strong>Resource Title</strong></p>
+                            <p>Brief description of this resource and its relevance to the presentation topics.</p>
+                            <a href="#" class="resource-link">Access Resource</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <div>
+                            <p><strong>Resource Title</strong></p>
+                            <p>Brief description of this resource and how it complements the presentation content.</p>
+                            <a href="#" class="resource-link">Access Resource</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <p><strong>Resource Title</strong></p>
+                            <p>Brief description of this resource and its specific benefits for students interested in this field.</p>
+                            <a href="#" class="resource-link">Access Resource</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="speaker-section">
+                <h3>Student Feedback</h3>
+                <p>Summary of student reactions and feedback on the presentation, highlighting the aspects that were most valuable or impactful. This section should demonstrate the educational effectiveness of the speaker's contribution to the tour.</p>
+                
+                <div class="key-quote">
+                    "A representative student comment that captures the general sentiment or a particularly insightful reaction to the presentation."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ELEC014 E-Journal</h3>
+                    <p>College of Computer Studies</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#itinerary">Itinerary</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#speakers">Speakers</a></li>
+                        <li><a href="index.html#reflections">Reflections</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#organizers">Organizers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>College of Computer Studies</p>
+                    <p>University of the Immaculate Conception</p>
+                    <p>Davao City, Philippines</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ELEC014 Industry and Educational Tour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
